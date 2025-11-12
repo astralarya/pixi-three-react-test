@@ -1,4 +1,3 @@
-import { Application } from "@pixi/react";
 import {
   Canvas,
   type CanvasProps,
@@ -10,10 +9,13 @@ import { useRef, useState } from "react";
 import { type WebGPURendererParameters } from "three/src/renderers/webgpu/WebGPURenderer.js";
 import { WebGPURenderer } from "three/webgpu";
 import * as THREE from "three/webgpu";
+import { Application, extend as extendPixi } from "@pixi/react";
+import { Graphics } from "pixi.js";
 // import tunnel from "tunnel-rat";
 //
 
 extend(THREE as unknown as ConstructorRepresentation);
+extendPixi({ Graphics });
 
 declare module "@react-three/fiber" {
   // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -62,7 +64,7 @@ export function PixiThreeCanvas({
           autoStart={false}
           resizeTo={containerRef}
           clearBeforeRender={false}
-          canvas={canvasElement}
+          // canvas={canvasElement}
         >
           <pixiGraphics
             draw={(graphics) => {
