@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Pixi + Three + React
 
 Usage:
 
@@ -6,3 +6,5 @@ Usage:
 pnpm install
 pnpm dev
 ```
+
+Pixi + Three content is in `src/components/pixi-three-canvas.tsx`.
