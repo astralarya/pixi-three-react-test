@@ -11,8 +11,6 @@ import { WebGPURenderer } from "three/webgpu";
 import * as THREE from "three/webgpu";
 import { Application, extend as extendPixi } from "@pixi/react";
 import { Graphics } from "pixi.js";
-// import tunnel from "tunnel-rat";
-//
 
 extend(THREE as unknown as ConstructorRepresentation);
 extendPixi({ Graphics });
