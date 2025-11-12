@@ -68,6 +68,7 @@ export function PixiThreeCanvas({
           autoStart={false}
           resizeTo={containerRef}
           clearBeforeRender={false}
+          // Uncomment below to set canvas prop
           // canvas={canvasElement}
         >
           <pixiGraphics
