@@ -52,9 +52,13 @@ export function PixiThreeCanvas({
           );
           return renderer;
         }}
-        camera={{ manual: true }}
       >
         {children}
+        <ambientLight intensity={1} />
+        <mesh>
+          <boxGeometry />
+          <meshStandardMaterial />
+        </mesh>
       </Canvas>
       {canvasContext && canvasElement && (
         <Application
